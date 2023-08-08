@@ -1,0 +1,143 @@
+table =[['','',''],
+        ['','',''],
+        ['','','']]
+tic = input("enter X or O")
+if tic == 'X':
+    tac = 'O'
+else:
+    tac = 'X'
+flag = False
+while True:
+    row = int(input("enter the row u want add in it"))
+    col = int(input("enter the column u want add in it"))
+    table[row-1][col-1] = tic
+    while True:
+        if table[0][0]==table[0][1] and table[0][1]==table[0][2] and table[0][0] != '':
+            if table[0][0]==tic:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[1][0]==table[1][1] and table[1][1]==table[1][2] and table[1][0] != '':
+            if table[1][0]==tic:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[2][0]==table[2][1] and table[2][1]==table[2][2] and table[2][0] != '':
+            if table[2][0]==tic:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[0][0]==table[1][0] and table[1][0]==table[2][0] and table[0][0] != '':
+            if table[0][0]==tic:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[0][1]==table[1][1] and table[1][1]==table[2][1] and table[0][1] != '':
+            if table[0][1]==tic:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[0][2]==table[1][2] and table[1][2]==table[2][2] and table[0][2] != '':
+            if table[0][2]==tic:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[0][0]==table[1][1] and table[1][1]==table[2][2] and table[0][0] != '':
+            if table[0][0]==tic:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[0][2]==table[1][1] and table[1][1]==table[2][0] and table[0][2] != '':
+            if table[0][2]==tic:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        else:
+            break
+
+    if flag == True:
+        break
+    row = int(input("enter the row u want add in it"))
+    col = int(input("enter the column u want add in it"))
+    table[row - 1][col - 1] = tac
+    while True:
+        if table[0][0]==table[0][1] and table[0][1]==table[0][2] and table[0][0] != '':
+            if table[0][0]==tac:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[1][0]==table[1][1] and table[1][1]==table[1][2] and table[1][0] != '':
+            if table[1][0]==tac:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[2][0]==table[2][1] and table[2][1]==table[2][2] and table[2][0] != '':
+            if table[2][0]==tac:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[0][0]==table[1][0] and table[1][0]==table[2][0] and table[0][0] != '':
+            if table[0][0]==tac:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[0][1]==table[1][1] and table[1][1]==table[2][1] and table[0][1] != '':
+            if table[0][1]==tac:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[0][2]==table[1][2] and table[1][2]==table[2][2] and table[0][2] != '':
+            if table[0][2]==tac:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[0][0]==table[1][1] and table[1][1]==table[2][2] and table[0][0] != '':
+            if table[0][0]==tac:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        elif table[0][2]==table[1][1] and table[1][1]==table[2][0] and table[0][2] != '':
+            if table[0][2]==tac:
+                print("you win")
+            else:
+                print("you lose")
+            flag = True
+            break
+        else:
+            break
+    if flag == True:
+        break
+
+print('    |    '+table[0][0] + '    |    '+table[0][1] + '    |    ' + table[0][2]+ '    |    ')
+print('    |    '+table[1][0] + '    |    '+table[1][1] + '    |    '+ table[1][2]+ '    |    ')
+print('    |    '+table[2][0] + '    |    '+table[2][1] + '    |    '+ table[2][2]+ '    |    ')
